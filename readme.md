@@ -46,8 +46,8 @@
     - 'App\Model' => 'App\Policies\ModelPolicy', (uncomment)
     - Passport::routes(); (in boot function)
   - vim config/auth.php
-    - ```'
-    guards' => [
+    ```
+    'guards' => [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
