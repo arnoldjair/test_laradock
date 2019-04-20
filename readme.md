@@ -137,3 +137,7 @@
         } 
     }
     ```
+
+## Clone
+
+- git clone --recurse-submodules https://github.com/arnoldjair/test_laradock.git
