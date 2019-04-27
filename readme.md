@@ -4,8 +4,6 @@
 - cd webapp
 - rm -rf .git
 - git init
-- git add .
-- git commit -m 'initial commit'
 - git submodule add https://github.com/LaraDock/laradock.git
 - cd laradock
 - cp env-example .env (this file must be modified, takes too much time and installs unnecessary packages)
@@ -14,6 +12,8 @@
 - cp .env.example .env
 - vim .env
   - DB_HOST=127.0.0.1 => DB_HOST=mysql
+- git add .
+- git commit -m 'initial commit'
 - cd laradock/
 - docker-compose exec workspace bash
   - composer install
@@ -22,12 +22,14 @@
 ## Mysql
 
 - docker-compose exec mysql mysql -u root -proot (laradock folder)
-  - create database homestead
-  - CREATE USER 'homestead'@'localhost' IDENTIFIED WITH mysql_native_password BY 'secret';
-  - GRANT ALL PRIVILEGES ON *.* TO 'homestead'@'localhost' WITH GRANT OPTION;
+  ```
+  create database homestead
+  CREATE USER 'homestead'@'localhost' IDENTIFIED WITH mysql_native_password BY 'secret';
+  GRANT ALL PRIVILEGES ON *.* TO 'homestead'@'localhost' WITH GRANT OPTION;
 
-  - CREATE USER 'homestead'@'%' IDENTIFIED WITH mysql_native_password BY 'secret';
-  - GRANT ALL PRIVILEGES ON *.* TO 'homestead'@'%' WITH GRANT OPTION;
+  CREATE USER 'homestead'@'%' IDENTIFIED WITH mysql_native_password BY 'secret';
+  GRANT ALL PRIVILEGES ON *.* TO 'homestead'@'%' WITH GRANT OPTION;
+  ```
 
 
 
